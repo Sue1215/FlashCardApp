@@ -11,10 +11,13 @@ import RealmSwift
 import UserNotifications
 
 class AddViewController: UIViewController {
-    @IBOutlet weak var EnglishText: UITextField!
-    @IBOutlet weak var JapaneseText: UITextField!
-    @IBOutlet weak var GenreText: UITextField!
-
+    @IBOutlet private weak var EnglishLabel: UILabel!
+    @IBOutlet private weak var EnglishText: UITextField!
+    @IBOutlet private weak var JapaneseLabel: UILabel!
+    @IBOutlet private weak var JapaneseText: UITextField!
+    @IBOutlet private weak var GenreLabel: UILabel!
+    @IBOutlet private weak var GenreText: UITextField!
+    
     var flashCard: FlashCard!
     let realm = try! Realm()
     
@@ -25,7 +28,7 @@ class AddViewController: UIViewController {
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
-
+        //lsじょf；ボイ
 //        pickerはこんな感じ
 //        datePicker.date = task.date as Date
         EnglishText.text = flashCard.en
